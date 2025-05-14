@@ -5,7 +5,8 @@ const { MongoClient } = require('mongodb');
 const { JsonRpcProvider, Contract } = require('ethers');
 
 const app = express();
-const PORT = 3001;
+// Ganti inisialisasi port:
+const PORT = process.env.PORT || 3001;
 
 // MongoDB setup
 const mongoClient = new MongoClient(process.env.MONGODB_URI);
